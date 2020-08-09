@@ -7,6 +7,41 @@
     <groupId>omid.test</groupId>
     <artifactId>classicmodels</artifactId>
     <version>1.0-SNAPSHOT</version>
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <configuration>
+                    <source>1.7</source>
+                    <target>1.7</target>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+    <dependencies>
 
+    <dependency>
+        <groupId>org.hibernate</groupId>
+        <artifactId>hibernate-core</artifactId>
+        <version>5.4.10.Final</version>
+    </dependency>
+
+    <dependency>
+        <groupId>org.scalatestplus</groupId>
+        <artifactId>junit-4-12_2.13</artifactId>
+        <version>3.1.2.0</version>
+        <scope>test</scope>
+    </dependency>
+
+    <dependency>
+        <groupId>mysql</groupId>
+        <artifactId>mysql-connector-java</artifactId>
+        <version>8.0.20</version>
+    </dependency>
+
+
+
+</dependencies>
 
 </project>
