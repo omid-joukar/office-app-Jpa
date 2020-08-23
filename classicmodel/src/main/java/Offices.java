@@ -1,7 +1,6 @@
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * Created by KPS on 8/9/2020.
@@ -18,6 +17,9 @@ public class Offices {
     private String country;
     private String postalCode;
     private String territory;
+    List<Employees> employeesList = new ArrayList<>();
+
+
     @Id
     @Column(name = "officeCode")
     public String getOfficeCode() {
@@ -90,6 +92,14 @@ public class Offices {
 
     public void setTerritory(String territory) {
         this.territory = territory;
+    }
+    @OneToMany(mappedBy = "offices")
+    public List<Employees> getEmployeesList() {
+        return employeesList;
+    }
+
+    public void setEmployeesList(List<Employees> employeesList) {
+        this.employeesList = employeesList;
     }
 
     @Override

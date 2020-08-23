@@ -5,6 +5,7 @@ import javax.persistence.*;
  */
 @Entity
 @Table(name="employees")
+@NamedQuery(name = "employeeS" , query = "from Employees where employeeNumber =:emN")
 public class Employees {
     private Long employeeNumber;
     private String lastName;
@@ -80,5 +81,26 @@ public class Employees {
 
     public void setJobTitle(String jobTitle) {
         this.jobTitle = jobTitle;
+    }
+    public Employees(Long employeeNumber , String firstName){
+        this.employeeNumber = employeeNumber;
+        this.firstName = firstName;
+    }
+
+    public Employees() {
+    }
+
+    @Override
+    public String toString() {
+        return "Employees{" +
+                "employeeNumber=" + employeeNumber +
+                ", lastName='" + lastName + '\'' +
+                ", firstName='" + firstName + '\'' +
+                ", extension='" + extension + '\'' +
+                ", email='" + email + '\'' +
+                ", offices=" + offices +
+                ", reportsTo=" + reportsTo +
+                ", jobTitle='" + jobTitle + '\'' +
+                '}';
     }
 }

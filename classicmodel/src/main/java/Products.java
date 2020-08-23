@@ -33,7 +33,7 @@ public class Products {
         this.productName = productName;
     }
     @ManyToOne
-    @Column(name = "productLine")
+    @JoinColumn(name = "productLine")
     public Productlines getProductLines() {
         return productLines;
     }

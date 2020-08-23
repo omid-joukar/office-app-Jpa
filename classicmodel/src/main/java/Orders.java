@@ -23,7 +23,7 @@ public class Orders {
     public void setOrderNumber(Long orderNumber) {
         this.orderNumber = orderNumber;
     }
-    @Column(name = "orderNumber")
+    @Column(name = "orderDate")
     public Date getOrderDate() {
         return orderDate;
     }
@@ -31,7 +31,7 @@ public class Orders {
     public void setOrderDate(Date orderDate) {
         this.orderDate = orderDate;
     }
-    @Column(name = "orderNumber")
+    @Column(name = "requiredDate")
     public Date getRequiredDate() {
         return requiredDate;
     }
@@ -39,7 +39,7 @@ public class Orders {
     public void setRequiredDate(Date requiredDate) {
         this.requiredDate = requiredDate;
     }
-    @Column(name = "orderNumber")
+    @Column(name = "shippedDate")
     public Date getShippedDate() {
         return shippedDate;
     }
@@ -47,7 +47,7 @@ public class Orders {
     public void setShippedDate(Date shippedDate) {
         this.shippedDate = shippedDate;
     }
-    @Column(name = "orderNumber")
+    @Column(name = "status")
     public String getStatus() {
         return status;
     }
@@ -55,7 +55,7 @@ public class Orders {
     public void setStatus(String status) {
         this.status = status;
     }
-    @Column(name = "orderNumber")
+    @Column(name = "comments")
     public String getComments() {
         return comments;
     }
